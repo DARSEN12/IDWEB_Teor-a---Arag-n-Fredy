@@ -8,6 +8,10 @@ def promedio_modificado(notas):
     # Calcular el nuevo promedio
     return sum(notas) / len(notas)
 
-# Ejemplo
-notas = [12, 15, 17, 14]
-print("Promedio final: ", promedio_modificado(notas))
+# Entrada de notas
+entrada = input("Ingrese las notas separadas por espacio: ")
+notas = list(map(int, entrada.split()))
+
+# Resultado
+print("Promedio final:", promedio_modificado(notas))
+
