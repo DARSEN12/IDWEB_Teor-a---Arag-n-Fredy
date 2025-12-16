@@ -1,0 +1,80 @@
+/*
+  CSS específico para la página "Hobbies y Estudios" (sin scripts)
+  Compatible con la paleta/base del style.css principal, pero autónomo si se usa solo.
+*/
+
+/* ===== Variables ===== */
+:root {
+    --bg: #0f1220;
+    --panel: #151935;
+    --ink: #eef2ff;
+    --muted: #c7cbe6;
+    --link: #8aa2ff;
+    --border: rgba(255,255,255,.12);
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(0,0,0,.25);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f7fb; --panel: #ffffff; --ink: #0e1320; --muted: #42506b; --link: #3a57ff; --border: rgba(0,0,0,.08); --shadow: 0 8px 24px rgba(0,0,0,.08);
+    }
+  }
+  
+  /* ===== Base ===== */
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,sans-serif}
+  img{max-width:100%;height:auto;display:block}
+  figure{margin:1rem 0}
+  figcaption{color:var(--muted);font-size:.95rem}
+  
+  /* ===== Layout global ===== */
+  main, header nav, footer{max-width:980px;margin-inline:auto;padding-inline:clamp(16px,3vw,28px)}
+  
+  /* ===== Header / Nav ===== */
+  header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.1) blur(8px);border-bottom:1px solid var(--border)}
+  nav{display:flex;gap:.75rem;align-items:center;padding-block:.75rem;flex-wrap:wrap}
+  nav a{color:var(--link);text-decoration:none;padding:.5rem .7rem;border-radius:.5rem}
+  nav a:hover{text-decoration:underline}
+  nav a:focus{outline:2px dashed var(--link);outline-offset:2px}
+  
+  /* ===== Títulos y texto ===== */
+  h1{font-size:clamp(1.6rem,2.5vw,2rem);margin:1rem 0 .5rem}
+  h2{font-size:clamp(1.25rem,2vw,1.5rem);margin:1.25rem 0 .25rem}
+  h3{font-size:clamp(1.05rem,1.6vw,1.25rem);margin:1rem 0 .25rem}
+  p{color:var(--muted);margin:.5rem 0}
+  strong{color:var(--ink)}
+  
+  /* ===== Secciones ===== */
+  section{background:color-mix(in srgb,var(--panel) 94%,transparent);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(16px,2.5vw,24px);margin-block:16px}
+  
+  /* ===== Hobbies ===== */
+  #hobbies ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;padding-left:1rem;margin:0}
+  #hobbies ul li{list-style:disc;border:1px dashed var(--border);border-radius:12px;padding:.6rem .8rem;background:color-mix(in srgb,var(--panel) 90%,transparent)}
+  #hobbies section[aria-label="Hobbies destacados"]{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:.5rem}
+  #hobbies article{border:1px solid var(--border);border-radius:12px;padding:1rem;background:color-mix(in srgb,var(--panel) 96%,transparent)}
+  #hobbies figure{margin-top:1rem}
+  
+  /* ===== Estudios ===== */
+  #estudios article[itemscope][itemtype$="EducationEvent"],
+  #estudios article.educacion{
+    border:1px solid var(--border);border-radius:12px;padding:1rem;background:color-mix(in srgb,var(--panel) 96%,transparent);margin-bottom:12px
+  }
+  #estudios section[aria-label^="Cursos"] ul{padding-left:1.2rem;margin:.25rem 0 0}
+  #estudios section[aria-label^="Cursos"] li{margin:.3rem 0}
+  
+  /* ===== Address / Contacto ===== */
+  address{font-style:normal;color:var(--muted)}
+  address a{color:var(--link)}
+  
+  /* ===== Footer ===== */
+  footer{border-top:1px solid var(--border);color:var(--muted);padding-block:24px;margin-top:24px}
+  
+  /* ===== Accesibilidad ===== */
+  :focus-visible{outline:2px dashed var(--link);outline-offset:2px}
+  .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
+  
+  /* ===== Impresión ===== */
+  @media print{header,nav{position:static;backdrop-filter:none}body{background:#fff;color:#000}section{box-shadow:none;border-color:#ccc}}
+  

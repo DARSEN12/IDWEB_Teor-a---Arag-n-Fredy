@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil — Vínculo familiar y lugar de nacimiento</title>
+  <meta name="description" content="Perfil personal: vínculo con familia y lugar de nacimiento." />
+  <meta property="og:title" content="Perfil — Vínculo familiar y lugar de nacimiento" />
+  <meta property="og:description" content="Vínculo con familia y lugar de nacimiento." />
+  <meta property="og:type" content="profile" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header role="banner">
+    <nav aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="#familia">Vínculo familiar</a>
+        <a href="#nacimiento">Lugar de nacimiento</a>
+        <a href="#contacto">Contacto</a>
+        <a href="hobbies.html" rel="next">Hobbies y Estudios</a>
+      </nav>
+      
+  </header>
+
+  <main id="inicio">
+    <h1>Perfil de <span data-field="nombre">Nombre Apellido</span></h1>
+    <p>Este sitio resume mi primer vínculo con la familia y el lugar donde nací.</p>
+
+    <section id="familia" aria-labelledby="titulo-familia">
+      <h2 id="titulo-familia">Vínculo con mi familia</h2>
+      <p>
+        <strong>Relación clave:</strong>
+        <span data-field="relacion-clave">[Ej.: Hijo(a) de Juan Apellido y María Apellido]</span>
+      </p>
+      <p>
+        <strong>Hermano(s)/Hermana(s):</strong>
+        <span data-field="hermanos">[Lista de nombres]</span>
+      </p>
+      <p>
+        <strong>Historia breve:</strong>
+        <span data-field="historia-familiar">[Un párrafo corto sobre el primer vínculo o referencia familiar]</span>
+      </p>
+      <figure>
+        <img src="" alt="Foto familiar (opcional)" />
+        <figcaption>Mi familia — descripción opcional.</figcaption>
+      </figure>
+    </section>
+
+    <section id="nacimiento" aria-labelledby="titulo-nacimiento">
+      <h2 id="titulo-nacimiento">Lugar de nacimiento</h2>
+      <p>
+        <strong>Ciudad:</strong> <span data-field="ciudad">[Ciudad]</span>
+      </p>
+      <p>
+        <strong>País:</strong> <span data-field="pais">[País]</span>
+      </p>
+      <p>
+        <strong>Fecha de nacimiento:</strong> <time datetime="YYYY-MM-DD" data-field="fecha">[dd/mm/aaaa]</time>
+      </p>
+      <p>
+        <strong>Contexto:</strong>
+        <span data-field="contexto-nacimiento">[Breve contexto histórico/cultural del lugar de nacimiento]</span>
+      </p>
+      <figure>
+        <img src="" alt="Imagen del lugar de nacimiento (opcional)" />
+        <figcaption>Mi lugar de nacimiento — descripción opcional.</figcaption>
+      </figure>
+
+      <div itemscope itemtype="https://schema.org/Place">
+        <meta itemprop="name" content="Ciudad, País" />
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <meta itemprop="addressLocality" content="Ciudad" />
+          <meta itemprop="addressCountry" content="País" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <address>
+        <p><strong>Correo:</strong> <a href="mailto:correo@ejemplo.com" data-field="email">correo@ejemplo.com</a></p>
+        <p><strong>Red(es):</strong> <a href="#" data-field="red1">@usuario</a></p>
+      </address>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; <span data-field="anio">2025</span> <span data-field="nombre-completo">Nombre Apellido</span>. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

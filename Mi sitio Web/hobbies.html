@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil — Hobbies y Estudios</title>
+
+  <meta name="description" content="Perfil personal: hobbies / aficiones y trayectoria de estudios." />
+  <meta property="og:title" content="Perfil — Hobbies y Estudios" />
+  <meta property="og:description" content="Hobbies y dónde estudié." />
+  <meta property="og:type" content="profile" />
+
+  <link rel="stylesheet" href="style-hobbies.css">
+</head>
+<body>
+  <header role="banner">
+    <nav aria-label="Principal">
+      <a href="hobbies-estudios.html">Hobbies y Estudios</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#estudios">Estudios</a>
+      <a href="#contacto">Contacto</a>
+      <a href="index.html" rel="prev">Familia y Nacimiento</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <h1>Perfil de <span data-field="nombre">Nombre Apellido</span></h1>
+    <p>Resumen rápido de mis aficiones y mi formación académica.</p>
+
+    <section id="hobbies" aria-labelledby="titulo-hobbies">
+      <h2 id="titulo-hobbies">Hobbies / Aficiones</h2>
+      <p>Listado de actividades que disfruto en mi tiempo libre.</p>
+
+      <ul>
+        <li data-field="hobby-1"><strong>[Hobby 1]</strong> — <span>[Descripción corta]</span></li>
+        <li data-field="hobby-2"><strong>[Hobby 2]</strong> — <span>[Descripción corta]</span></li>
+        <li data-field="hobby-3"><strong>[Hobby 3]</strong> — <span>[Descripción corta]</span></li>
+      </ul>
+
+      <section aria-label="Hobbies destacados">
+        <article aria-labelledby="hobbyA-titulo">
+          <h3 id="hobbyA-titulo">[Hobby destacado A]</h3>
+          <p data-field="hobbyA-detalle">[Detalle: nivel, logros, frecuencia, comunidad]</p>
+        </article>
+        <article aria-labelledby="hobbyB-titulo">
+          <h3 id="hobbyB-titulo">[Hobby destacado B]</h3>
+          <p data-field="hobbyB-detalle">[Detalle: equipamiento, eventos, metas]</p>
+        </article>
+      </section>
+
+      <figure>
+        <img src="" alt="Imagen representativa de un hobby (opcional)" />
+        <figcaption>Mis aficiones — imagen opcional.</figcaption>
+      </figure>
+    </section>
+
+    <section id="estudios" aria-labelledby="titulo-estudios">
+      <h2 id="titulo-estudios">Dónde estudié</h2>
+
+      <article itemscope itemtype="https://schema.org/EducationEvent" aria-labelledby="edu1-titulo">
+        <h3 id="edu1-titulo" itemprop="name">[Programa / Carrera]</h3>
+        <p>
+          <strong>Institución:</strong> <span itemprop="performer" itemscope itemtype="https://schema.org/CollegeOrUniversity">
+            <span itemprop="name" data-field="institucion">[Universidad / Instituto]</span>
+          </span>
+        </p>
+        <p>
+          <strong>Periodo:</strong>
+          <time datetime="YYYY" data-field="inicio">[Año inicio]</time>
+          —
+          <time datetime="YYYY" data-field="fin">[Año fin]</time>
+        </p>
+        <p>
+          <strong>Ubicación:</strong>
+          <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+            <span itemprop="name" data-field="ciudad">[Ciudad]</span>,
+            <span data-field="pais">[País]</span>
+          </span>
+        </p>
+        <p>
+          <strong>Resumen:</strong> <span data-field="resumen-estudios">[Áreas, cursos clave, tesis o proyectos]</span>
+        </p>
+      </article>
+
+      <figure>
+        <img src="https://fips.unsa.edu.pe/ingenieriadesistemas/wp-content/uploads/sites/2/2017/10/front_galeria_epis_acreditada_ABET_02.jpg" alt="Foto del campus o institución (opcional)" />
+        <figcaption>Mi institución</figcaption>
+      </figure>
+    </section>
+
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <address>
+        <p><strong>Correo:</strong> <a href="faragonc@unsa.edu.pe" data-field="email">faragonc@unsa.edu.pe</a></p>
+        <p><strong>Portafolio:</strong> <a href="#" data-field="DARSEN12">[URL opcional]</a></p>
+      </address>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; <span data-field="anio">2025</span> <span data-field="nombre-completo">Nombre Apellido</span>. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
