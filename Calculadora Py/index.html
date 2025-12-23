@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Calculadora PyScript</title>
-  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <meta charset="UTF-8">
+  <title>Calculadora CGI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <py-script>
-    def suma(a, b):
-        return a + b
-
-    print(suma(5, 3))
-  </py-script>
+  <h1>Calculadora con CGI</h1>
+  <form action="/cgi-bin/calculadora.py" method="get">
+    <label for="expr">Expresión:</label>
+    <input type="text" id="expr" name="expr" value="12+(34*7/(6-8))-1">
+    <button type="submit">Calcular</button>
+  </form>
 </body>
 </html>
